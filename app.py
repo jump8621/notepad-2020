@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
 from os import environ
 
@@ -13,7 +13,8 @@ class Task(db.Model):
 
 @app.route('/')
 def index():
-    return "Priscilla Mullins(1600-1651) - 10th Great Grandmother - Mayflower"
+    return render_template('index.html')
+    # "Priscilla Mullins(1600-1651) - 10th Great Grandmother - Mayflower"
 
 @app.route('/api/tasks-postgres')
 def tasksPostgres():

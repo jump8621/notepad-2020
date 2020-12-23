@@ -17,7 +17,7 @@ def index():
     # "Priscilla Mullins(1600-1651) - 10th Great Grandmother - Mayflower"
 
 @app.route('/api/tasks-postgres')
-def tasksPostgres():
+def getTasksPostgres():
     tasks = db.session.query(Task)
     data = []
 
